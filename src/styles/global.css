@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "DM Sans", sans-serif;
+
+  --color-navy:        #0d1b2a;
+  --color-navy-mid:    #1a2f42;
+  --color-navy-light:  #243d52;
+  --color-silver:      #c2d0d8;
+  --color-silver-dark: #8a9fad;
+  --color-gold:        #c9a84c;
+  --color-ice:         #f4f7f9;
+  --color-mist:        #e8eef2;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 1.2s ease-out both;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html {
+  scroll-behavior: smooth;
+}

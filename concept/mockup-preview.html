@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArcticUNI V2 — Concept Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0d1b2a;
+      --navy-2: #1a2f42;
+      --silver: #c2d0d8;
+      --gold:   #c9a84c;
+      --ice:    #f4f7f9;
+      --mist:   #e8eef2;
+      --text:   #0d1b2a;
+      --text-2: #4a6070;
+      --text-3: #8a9fad;
+      --white:  #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); -webkit-font-smoothing: antialiased; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--mist);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 3rem; height: 64px;
+    }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; color: var(--navy); letter-spacing: 0.04em; text-decoration: none; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-2); text-decoration: none; transition: color 0.2s; font-weight: 500; }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-cta { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; padding: 0.5rem 1.25rem; border: 1px solid var(--navy); color: var(--navy); text-decoration: none; transition: all 0.2s; }
+    .nav-cta:hover { background: var(--navy); color: var(--white); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; padding: 0 3rem; padding-top: 64px; max-width: 1200px; margin: 0 auto;
+      gap: 4rem;
+    }
+    .hero-text {}
+    .hero-kicker { font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; font-weight: 500; }
+    .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 300; line-height: 1.05; color: var(--navy); margin-bottom: 1.5rem; }
+    .hero-title em { font-style: italic; font-weight: 300; }
+    .hero-sub { font-size: 0.9rem; line-height: 1.75; color: var(--text-2); max-width: 380px; margin-bottom: 2.5rem; }
+    .hero-actions { display: flex; align-items: center; gap: 1.5rem; }
+    .btn-primary { display: inline-block; padding: 0.85rem 2rem; background: var(--navy); color: var(--white); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: background 0.2s; }
+    .btn-primary:hover { background: var(--navy-2); }
+    .btn-ghost { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-3); text-decoration: none; border-bottom: 1px solid var(--mist); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
+    .btn-ghost:hover { color: var(--text-2); border-color: var(--text-2); }
+    .hero-product { display: flex; align-items: center; justify-content: center; }
+    .hero-can { width: 260px; max-width: 100%; filter: drop-shadow(0 40px 60px rgba(13,27,42,0.12)) drop-shadow(0 12px 24px rgba(13,27,42,0.08)); }
+    .hero-coord { position: absolute; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-3); writing-mode: vertical-rl; left: 1.5rem; bottom: 8rem; }
+
+    /* ── TRUST BAR ── */
+    .trust-bar { background: var(--ice); border-top: 1px solid var(--mist); border-bottom: 1px solid var(--mist); padding: 1.5rem 3rem; }
+    .trust-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 4rem; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-2); font-weight: 500; }
+    .trust-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+    /* ── ORIGIN ── */
+    .section { padding: 7rem 3rem; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-kicker { font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; font-weight: 500; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 3.5vw, 3.2rem); font-weight: 300; color: var(--navy); line-height: 1.15; margin-bottom: 1.5rem; }
+    .section-body { font-size: 0.9rem; line-height: 1.8; color: var(--text-2); max-width: 520px; }
+
+    .origin-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .origin-coord-block { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; padding: 4rem; background: var(--ice); border: 1px solid var(--mist); }
+    .coord-number { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; color: var(--navy); line-height: 1; }
+    .coord-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-3); }
+    .coord-sub { font-size: 0.75rem; color: var(--text-2); text-align: center; line-height: 1.6; margin-top: 1rem; max-width: 200px; }
+
+    .highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 5rem; }
+    .highlight { border-top: 1px solid var(--mist); padding-top: 1.5rem; }
+    .highlight-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; font-weight: 500; }
+    .highlight-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--navy); margin-bottom: 0.6rem; }
+    .highlight-text { font-size: 0.82rem; line-height: 1.7; color: var(--text-2); }
+
+    /* ── PRODUCT ── */
+    .product-section { background: var(--ice); }
+    .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .product-images { display: flex; gap: 2rem; align-items: flex-end; justify-content: center; }
+    .product-can-lg { width: 180px; filter: drop-shadow(0 30px 50px rgba(13,27,42,0.1)); }
+    .product-capsule { width: 80px; filter: drop-shadow(0 20px 30px rgba(13,27,42,0.08)); }
+    .product-shell { width: 120px; opacity: 0.7; filter: drop-shadow(0 10px 20px rgba(13,27,42,0.06)); }
+    .spec-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+    .spec-table td { padding: 0.75rem 0; border-bottom: 1px solid var(--mist); font-size: 0.82rem; }
+    .spec-table td:first-child { color: var(--text-2); }
+    .spec-table td:last-child { color: var(--navy); font-weight: 500; text-align: right; }
+    .spec-table tr:last-child td { border-bottom: none; }
+
+    /* ── SCIENCE ── */
+    .science-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3rem; }
+    .science-card { padding: 2rem; border: 1px solid var(--mist); background: var(--white); }
+    .science-card:hover { border-color: var(--silver); }
+    .science-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--navy); margin-bottom: 0.6rem; font-weight: 400; }
+    .science-card-text { font-size: 0.8rem; line-height: 1.7; color: var(--text-2); }
+    .science-badge { display: inline-block; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; border: 1px solid var(--gold); color: var(--gold); padding: 0.2rem 0.6rem; margin-bottom: 0.75rem; }
+
+    /* ── CONTACT ── */
+    .contact-section { background: var(--navy); }
+    .contact-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+    .contact-section .section-kicker { color: var(--silver); }
+    .contact-section .section-title { color: var(--white); }
+    .contact-section .section-body { color: rgba(255,255,255,0.55); margin: 0 auto 2.5rem; }
+    .contact-email { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--silver); text-decoration: none; border-bottom: 1px solid rgba(194,208,216,0.3); padding-bottom: 2px; transition: color 0.2s; }
+    .contact-email:hover { color: var(--white); }
+    .contact-address { margin-top: 2rem; font-size: 0.78rem; color: rgba(255,255,255,0.35); line-height: 1.8; letter-spacing: 0.05em; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--navy); border-top: 1px solid rgba(255,255,255,0.06); padding: 1.5rem 3rem; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: rgba(255,255,255,0.4); }
+    .footer-copy { font-size: 0.72rem; color: rgba(255,255,255,0.2); letter-spacing: 0.05em; }
+    .footer-msxlink { font-size: 0.72rem; color: rgba(255,255,255,0.3); text-decoration: none; letter-spacing: 0.05em; transition: color 0.2s; }
+    .footer-msxlink:hover { color: rgba(255,255,255,0.6); }
+
+    /* ── NOTE BADGE ── */
+    .mockup-note { position: fixed; bottom: 1.5rem; right: 1.5rem; background: var(--gold); color: var(--navy); padding: 0.5rem 1rem; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; z-index: 999; }
+  </style>
+</head>
+<body>
+
+  <div class="mockup-note">Concept Mockup</div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">ArcticUNI</a>
+    <ul class="nav-links">
+      <li><a href="#origin">Origin</a></li>
+      <li><a href="#product">Product</a></li>
+      <li><a href="#science">Science</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Enquire</a>
+  </nav>
+
+  <!-- HERO -->
+  <section style="position:relative; overflow:hidden;">
+    <div class="hero">
+      <div class="hero-text">
+        <p class="hero-kicker">69°N · Arctic Norway · Marine Calcium</p>
+        <h1 class="hero-title">The World's Most<br><em>Sustainable Calcium.</em></h1>
+        <p class="hero-sub">Sourced from Arctic sea urchins at 69°N. Pure. Traceable. Third-party verified for the world's most demanding markets.</p>
+        <div class="hero-actions">
+          <a href="#product" class="btn-primary">Discover the Product</a>
+          <a href="#science" class="btn-ghost">Quality & Science →</a>
+        </div>
+      </div>
+      <div class="hero-product">
+        <img class="hero-can" src="f9c7cf99-6043-488a-8406-a83d2c9de885-removebg.png" alt="ArcticUNI Calcium supplement can">
+      </div>
+    </div>
+    <span class="hero-coord">69°N · Tromsø · Norway</span>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-inner">
+      <div class="trust-item"><span class="trust-dot"></span> EuroFins Third-Party Tested</div>
+      <div class="trust-item"><span class="trust-dot"></span> MFDS Compliant</div>
+      <div class="trust-item"><span class="trust-dot"></span> Full Batch Traceability</div>
+      <div class="trust-item"><span class="trust-dot"></span> Sustainably Harvested</div>
+      <div class="trust-item"><span class="trust-dot"></span> Heavy Metals Verified</div>
+    </div>
+  </div>
+
+  <!-- ORIGIN -->
+  <section class="section" id="origin">
+    <div class="section-inner">
+      <div class="origin-grid">
+        <div>
+          <p class="section-kicker">Origin</p>
+          <h2 class="section-title">Born from the<br>Arctic Ocean.</h2>
+          <p class="section-body">ArcticUNI is derived from sustainably harvested sea urchins in the crystal-clear waters of Northern Norway — one of the cleanest marine environments on Earth. Every batch is fully traceable from ocean to capsule.</p>
+          <p class="section-body" style="margin-top:1rem;">A partnership between Marine Spark X and leading marine research institutions, united by a shared vision: bringing the purest marine calcium in the world to premium markets.</p>
+        </div>
+        <div class="origin-coord-block">
+          <div class="coord-number">69°N</div>
+          <div class="coord-label">Arctic Norway</div>
+          <p class="coord-sub">Tromsø · Where pristine Arctic currents create one of Earth's purest marine ecosystems.</p>
+        </div>
+      </div>
+
+      <div class="highlights">
+        <div class="highlight">
+          <div class="highlight-label">Sourcing</div>
+          <div class="highlight-title">Arctic Origin</div>
+          <p class="highlight-text">Harvested from the pristine waters at 69°N, where Arctic currents create one of the purest marine ecosystems on Earth.</p>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Environment</div>
+          <div class="highlight-title">Sustainable Harvest</div>
+          <p class="highlight-text">Responsible harvesting that protects marine biodiversity, ensuring the Arctic ecosystem thrives for generations to come.</p>
+        </div>
+        <div class="highlight">
+          <div class="highlight-label">Partnership</div>
+          <div class="highlight-title">Marine Spark X</div>
+          <p class="highlight-text">A Marine Spark X initiative combining marine science expertise with premium supplement formulation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT -->
+  <section class="section product-section" id="product">
+    <div class="section-inner">
+      <div class="product-grid">
+        <div class="product-images">
+          <img class="product-shell" src="b66caf8c-2362-40be-ae51-349b2e12390b-removebg.png" alt="Sea urchin shell — the raw material">
+          <img class="product-can-lg" src="f9c7cf99-6043-488a-8406-a83d2c9de885-removebg.png" alt="ArcticUNI finished product">
+          <img class="product-capsule" src="73bc4b57-82ae-4142-9e61-c3976308b2ee-removebg.png" alt="ArcticUNI capsule">
+        </div>
+        <div>
+          <p class="section-kicker">The Product</p>
+          <h2 class="section-title">From Sea<br>to Supplement.</h2>
+          <p class="section-body">250 mg of marine calcium per capsule, naturally rich in trace minerals. No additives. No shortcuts. 60 capsules per tin, 36-month shelf life.</p>
+
+          <table class="spec-table">
+            <tr><td>Calcium (marine-derived)</td><td>250 mg per capsule</td></tr>
+            <tr><td>Source</td><td>Arctic sea urchin shell</td></tr>
+            <tr><td>Trace minerals</td><td>Mg, K, Zn, Sr, P</td></tr>
+            <tr><td>Standard dose</td><td>1 capsule / day</td></tr>
+            <tr><td>Enhanced dose</td><td>3 capsules / day (750 mg)</td></tr>
+            <tr><td>Capsules per tin</td><td>60</td></tr>
+            <tr><td>Shelf life</td><td>36 months</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCIENCE -->
+  <section class="section" id="science">
+    <div class="section-inner">
+      <p class="section-kicker">Quality & Science</p>
+      <h2 class="section-title">Verified Purity.<br>Proven Quality.</h2>
+
+      <div class="science-grid">
+        <div class="science-card">
+          <div class="science-badge">Third-Party Tested</div>
+          <div class="science-card-title">EuroFins Laboratory Testing</div>
+          <p class="science-card-text">Every batch is independently tested by EuroFins, a globally recognised laboratory network, ensuring our product meets the highest standards of purity and potency.</p>
+        </div>
+        <div class="science-card">
+          <div class="science-badge">Korean Market Ready</div>
+          <div class="science-card-title">MFDS Compliance</div>
+          <p class="science-card-text">Formulated in full alignment with South Korea's Ministry of Food and Drug Safety standards. Documentation available for immediate regulatory submission.</p>
+        </div>
+        <div class="science-card">
+          <div class="science-badge">Full Chain of Custody</div>
+          <div class="science-card-title">Batch Traceability</div>
+          <p class="science-card-text">Every tin can be traced back to a specific harvest location and processing date. Ocean to capsule, documented.</p>
+        </div>
+        <div class="science-card">
+          <div class="science-badge">Certificate of Analysis</div>
+          <div class="science-card-title">Heavy Metals Verified</div>
+          <p class="science-card-text">Comprehensive COA for every batch including lead, mercury, cadmium, and arsenic. All results well below regulatory limits.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contact">
+    <div class="contact-inner">
+      <p class="section-kicker">Get in Touch</p>
+      <h2 class="section-title">Partner with Us.</h2>
+      <p class="section-body">Interested in distribution, partnership, or learning more about ArcticUNI? We'd love to hear from you.</p>
+      <a href="mailto:Gustav@marinesparkx.com" class="contact-email">Gustav@marinesparkx.com</a>
+      <div class="contact-address">
+        Framstredet 10 · Tromsø, Norway · 69°N
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">ArcticUNI</span>
+      <a href="https://marinesparkx.github.io" class="footer-msxlink">A Marine Spark X Partnership ↗</a>
+      <span class="footer-copy">© 2026 ArcticUNI</span>
+    </div>
+  </footer>
+
+</body>
+</html>
