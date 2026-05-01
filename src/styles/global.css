@@ -3,6 +3,7 @@
 @theme {
   --font-display: "Cormorant Garamond", serif;
   --font-body: "DM Sans", sans-serif;
+  --font-copperplate: "Copperplate Gothic Bold", "Copperplate Gothic", Copperplate, "Copperplate Gothic Light", fantasy;
 
   --color-navy:        #0d1b2a;
   --color-navy-mid:    #1a2f42;
@@ -44,4 +45,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+.photo-glow {
+  box-shadow:
+    0 0 18px 4px rgba(201, 168, 76, 0.18),
+    0 0 6px 1px rgba(201, 168, 76, 0.12);
 }
