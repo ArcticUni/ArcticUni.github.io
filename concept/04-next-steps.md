@@ -1,4 +1,4 @@
-# ArcticUNI V2 — Next Steps
+# AuroraUNI V2 — Next Steps
 
 ## Decisions needed before we start building
 
@@ -40,7 +40,7 @@ This affects: copy tone, CTA language, which sections to emphasize.
    This takes ~15 minutes — it's mostly copy-paste and rename.
 
 2. **Set up GitHub repository**
-   Create `arcticuni-v2` repo (or update the existing `ArcticUNI.github.io` repo).
+   Create `aurorauni-v2` repo (or update the existing `ArcticUNI.github.io` repo).
    Push the scaffolded project. Enable GitHub Pages.
 
 3. **Build sections one by one**
@@ -64,7 +64,7 @@ From marinesparkx.github.io, we take:
 - `src/styles/global.css` — the Tailwind theme (ocean colors, fonts)
 - `tsconfig.json` — TypeScript settings
 
-We then create a fresh `src/pages/index.astro` for ArcticUNI's content
+We then create a fresh `src/pages/index.astro` for AuroraUNI's content
 instead of copying Marine Spark X's content.
 
 Images from the concept folder go into `src/assets/images/` so Astro

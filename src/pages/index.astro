@@ -2,13 +2,13 @@
 import "../styles/global.css";
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
-import productCan from "../assets/images/ArcticUNI_Calcium_EN.svg";
+import productCan from "../assets/images/aurorauni-product.png";
 import productCapsule from "../assets/images/product-capsule.png";
 import productShell from "../assets/images/product-shell.png";
 import heroBg from "../assets/images/hero-bg.png";
 import formatIngredient from "../assets/images/format-ingredient.png";
 import formatCapsule from "../assets/images/format-capsule.png";
-import formatCan from "../assets/images/ArcticUNI_Calcium_EN.svg";
+import formatCan from "../assets/images/aurorauni-product.png";
 
 const trustItems = [
   "EuroFins Third-Party Tested",
@@ -76,9 +76,9 @@ const scienceCards = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="ArcticUNI — Premium marine calcium sourced from Arctic sea urchins at 69°N. Pure. Traceable. Third-party verified."
+      content="AuroraUNI — Premium marine calcium sourced from Arctic sea urchins at 69°N. Pure. Traceable. Third-party verified."
     />
-    <meta property="og:title" content="ArcticUNI — Arctic Marine Calcium" />
+    <meta property="og:title" content="AuroraUNI — Arctic Marine Calcium" />
     <meta
       property="og:description"
       content="The world's most sustainable calcium. Sourced from Arctic sea urchins at 69°N."
@@ -92,7 +92,7 @@ const scienceCards = [
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <title>ArcticUNI Arctic Marine Calcium</title>
+    <title>AuroraUNI Arctic Marine Calcium</title>
   </head>
 
   <body class="bg-white text-navy font-body antialiased">
@@ -107,7 +107,7 @@ const scienceCards = [
         class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between transition-all duration-300"
         id="nav-inner"
       >
-        <a href="/" class="font-copperplate text-2xl md:text-4xl text-navy tracking-wide">ArcticUNI<sup class="text-xs font-body font-medium tracking-normal align-super">TM</sup></a>
+        <a href="/" class="font-copperplate text-2xl md:text-4xl text-navy tracking-wide">AuroraUNI<sup class="text-xs font-body font-medium tracking-normal align-super">TM</sup></a>
         <!-- nav links intentionally kept at text-sm per user instruction -->
         <div class="hidden md:flex items-center gap-10 text-sm tracking-[0.12em] uppercase font-medium">
           <a href="#origin" class="text-navy-mid hover:text-navy transition-colors">Origin</a>
@@ -205,36 +205,36 @@ const scienceCards = [
           <div class="flex flex-col items-center gap-6 reveal">
             <Image
               src={formatIngredient}
-              alt="ArcticUNI marine calcium ingredient"
+              alt="AuroraUNI marine calcium ingredient"
               class="w-2/3 md:w-full h-auto"
               widths={[480, 768]}
             />
             <div class="text-center">
-              <p class="font-display text-2xl md:text-4xl text-navy font-light">ArcticUNI<sup class="text-sm md:text-base">TM</sup></p>
+              <p class="font-display text-2xl md:text-4xl text-navy font-light">AuroraUNI<sup class="text-sm md:text-base">TM</sup></p>
               <p class="text-sm md:text-base tracking-[0.12em] uppercase text-navy-mid font-medium mt-2">Ingredient</p>
             </div>
           </div>
           <div class="flex flex-col items-center gap-6 reveal" style="transition-delay: 0.1s">
             <Image
               src={formatCapsule}
-              alt="ArcticUNI calcium capsule bulk format"
+              alt="AuroraUNI calcium capsule bulk format"
               class="w-2/3 md:w-full h-auto"
               widths={[480, 768]}
             />
             <div class="text-center">
-              <p class="font-display text-2xl md:text-4xl text-navy font-light">ArcticUNI<sup class="text-sm md:text-base">TM</sup></p>
+              <p class="font-display text-2xl md:text-4xl text-navy font-light">AuroraUNI<sup class="text-sm md:text-base">TM</sup></p>
               <p class="text-sm md:text-base tracking-[0.12em] uppercase text-navy-mid font-medium mt-2">Bulk</p>
             </div>
           </div>
           <div class="flex flex-col items-center gap-6 reveal" style="transition-delay: 0.2s">
             <Image
               src={formatCan}
-              alt="ArcticUNI finished supplement tin"
-              class="w-2/5 md:w-2/5 h-auto mx-auto"
-              widths={[240, 384]}
+              alt="AuroraUNI finished supplement bottle"
+              class="w-[51.2%] md:w-[51.2%] h-auto mx-auto"
+              widths={[480, 768]}
             />
             <div class="text-center">
-              <p class="font-display text-2xl md:text-4xl text-navy font-light">ArcticUNI<sup class="text-sm md:text-base">TM</sup></p>
+              <p class="font-display text-2xl md:text-4xl text-navy font-light">AuroraUNI<sup class="text-sm md:text-base">TM</sup></p>
               <p class="text-sm md:text-base tracking-[0.12em] uppercase text-navy-mid font-medium mt-2">White Label</p>
             </div>
           </div>
@@ -254,7 +254,7 @@ const scienceCards = [
               Born from the<br />Arctic Ocean.
             </h2>
             <p class="text-lg leading-relaxed text-navy-mid mb-5">
-              ArcticUNI is derived from sustainably harvested sea urchins in
+              AuroraUNI is derived from sustainably harvested sea urchins in
               the crystal-clear waters of Northern Norway — one of the cleanest
               marine environments on Earth. Every batch is fully traceable from
               ocean to capsule.
@@ -304,7 +304,7 @@ const scienceCards = [
         <div class="flex items-center justify-center reveal">
           <Image
             src={productCan}
-            alt="ArcticUNI finished product tin"
+            alt="AuroraUNI finished product bottle"
             class="w-full max-w-[18rem] md:max-w-[36rem] h-auto drop-shadow-2xl photo-glow"
             widths={[448, 576, 720]}
           />
@@ -378,7 +378,7 @@ const scienceCards = [
         </h2>
         <p class="text-lg leading-relaxed text-white/50 mb-12">
           Interested in distribution, partnership, or learning more about
-          ArcticUNI? We'd love to hear from you.
+          AuroraUNI? We'd love to hear from you.
         </p>
         <a
           href="mailto:Gustav@marinesparkx.com"
@@ -395,14 +395,14 @@ const scienceCards = [
     <!-- FOOTER -->
     <footer class="bg-navy border-t border-white/5 py-8 px-6">
       <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <span class="font-display text-2xl text-white/40">ArcticUNI</span>
+        <span class="font-display text-2xl text-white/40">AuroraUNI</span>
         <a
           href="https://marinesparkx.github.io"
           class="text-base text-white/25 hover:text-white/50 transition-colors tracking-wide"
         >
           A Marine Spark X Partnership ↗
         </a>
-        <span class="text-base text-white/20 tracking-wide">© 2026 ArcticUNI</span>
+        <span class="text-base text-white/20 tracking-wide">© 2026 AuroraUNI</span>
       </div>
     </footer>
 

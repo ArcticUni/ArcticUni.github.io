@@ -1,4 +1,4 @@
-# ArcticUNI V2 — Design Direction
+# AuroraUNI V2 — Design Direction
 
 ## DECISION: Option C — Ice White ✓
 
@@ -59,7 +59,7 @@ These fonts are already loaded in the marinesparkx scaffolding — free to reuse
 - **Display / Headlines:** Cormorant Garamond — serif, elegant, weight 300 for large sizes
 - **Body / UI:** DM Sans — geometric sans, clean and modern
 
-The current ArcticUNI site uses Inter — fine but generic. Cormorant Garamond elevates it.
+The current AuroraUNI site uses Inter — fine but generic. Cormorant Garamond elevates it.
 
 ## Color palette options
 
@@ -69,7 +69,7 @@ The current ArcticUNI site uses Inter — fine but generic. Cormorant Garamond e
 - Body text: `ocean-100`
 - Accent: `teal-400` / `teal-300`
 
-### ArcticUNI-specific variation (adds brand distinctiveness)
+### AuroraUNI-specific variation (adds brand distinctiveness)
 Keep the ocean palette but add an **ice/glacier blue** accent alongside the teal:
 - Primary accent: `teal-400` (same as MSX)
 - Secondary accent: `sky-200` or `blue-200` (glacier ice, lighter/cooler)

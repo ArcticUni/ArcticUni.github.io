@@ -1,11 +1,11 @@
-# ArcticUNI V2 — Site Sections
+# AuroraUNI V2 — Site Sections
 
 One-page layout (same pattern as marinesparkx.github.io). Scroll-based navigation.
 
 ---
 
 ## Navigation
-- Logo left: ArcticUNI wordmark (or logo if we have one)
+- Logo left: AuroraUNI wordmark (or logo if we have one)
 - Links: About · Product · Science · Contact
 - CTA button: "Enquire" or "Get in Touch"
 - Sticky, transparent → solid on scroll (already built in marinesparkx scaffolding)
@@ -114,7 +114,7 @@ If the primary market is South Korea, consider adding:
 
 ## 6. Footer
 
-- ArcticUNI logo
+- AuroraUNI logo
 - "A Marine Spark X Partnership" with link to marinesparkx.github.io
 - Nav links
 - Copyright 2026
@@ -125,6 +125,6 @@ If the primary market is South Korea, consider adding:
 
 - `/science` — detailed research page with references
 - `/distributors` — B2B partner info / MOQ / pricing enquiry
-- `/about` — ArcticUNI team + Marine Spark X history
+- `/about` — AuroraUNI team + Marine Spark X history
 
 **Agreed: V2 is one-page only. Keep it simple.**

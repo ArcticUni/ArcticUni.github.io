@@ -1,8 +1,8 @@
-# ArcticUNI V2 — Concept Overview
+# AuroraUNI V2 — Concept Overview
 
 ## What we're building
 
-A new ArcticUNI website built with **Astro + Tailwind CSS**, using the same technical
+A new AuroraUNI website built with **Astro + Tailwind CSS**, using the same technical
 scaffolding as marinesparkx.github.io. The goal is a premium, Nordic editorial feel
 that matches the quality of the product itself.
 
@@ -21,7 +21,7 @@ visual identity that clearly sits inside the Marine Spark X family.
 
 ## Target audience (brainstorm — needs your input)
 
-Based on the South Korea onepager, ArcticUNI is aimed at:
+Based on the South Korea onepager, AuroraUNI is aimed at:
 - B2B: Korean supplement importers / distributors / retailers
 - B2C: Premium health supplement consumers who care about origin and traceability
 
@@ -43,8 +43,8 @@ Possible alternatives:
 
 ## Relationship to marinesparkx.github.io
 
-ArcticUNI is a Marine Spark X product. The V2 site should:
+AuroraUNI is a Marine Spark X product. The V2 site should:
 - Feel like a sibling brand (same typographic family, similar color palette)
-- But have its own identity — ArcticUNI is the *consumer/partner-facing* product,
+- But have its own identity — AuroraUNI is the *consumer/partner-facing* product,
   Marine Spark X is the company behind it
 - Cross-link to marinesparkx.github.io (e.g. footer: "A Marine Spark X Company")
