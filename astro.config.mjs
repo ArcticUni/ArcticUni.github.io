@@ -5,7 +5,7 @@ import icon from "astro-icon";
 import clickToAi from "astro-click-to-ai";
 
 export default defineConfig({
-  site: "https://arcticuni.com",
+  site: "https://aurorauni.com",
   integrations: [icon(), clickToAi()],
   vite: {
     plugins: [tailwindcss()],
